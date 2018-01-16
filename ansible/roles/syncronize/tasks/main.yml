@@ -1,5 +1,6 @@
-- name: ===================== Install Java =====================
-  yum:    
-    name: java
+- name: ===================== Install libselinux-python =====================
+  yum:
+    name: "{{item.name}}"
     state: latest
-  become: yes
+  with_items:  "{{ ToolsList }}"
+become: yes
