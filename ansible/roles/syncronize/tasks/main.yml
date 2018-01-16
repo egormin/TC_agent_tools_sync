@@ -3,4 +3,4 @@
     name: "{{item.name}}"
     state: latest
   with_items:  "{{ ToolsList }}"
-become: yes
+  become: yes
