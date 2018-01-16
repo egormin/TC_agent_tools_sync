@@ -1,0 +1,7 @@
+
+- name: ========== TEST JOB ==========
+  hosts:
+  - tc_agent
+
+  roles:
+  - syncronize
