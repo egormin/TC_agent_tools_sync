@@ -1,0 +1,11 @@
+[build_agents]
+10.6.98.55
+10.6.98.43
+
+[All_servers:children]
+build_agents
+
+[All_servers:vars]
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+ansible_ssh_user=__myUser__
+ansible_ssh_pass=__myPass__
