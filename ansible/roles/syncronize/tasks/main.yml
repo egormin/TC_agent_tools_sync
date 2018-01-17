@@ -1,6 +1,6 @@
 - name: ===================== CHECK IF DIRECTORY '{{Tools_path}}' EXISTS =====================
   file:
-    path: '{{buildAgent_path}}'
+    path: '{{Tools_path}}'
     state: directory
     mode: 0755
   become: yes
