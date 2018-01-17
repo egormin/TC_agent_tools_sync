@@ -7,7 +7,7 @@
   
 - name: ===================== DOWNLOAD TOOLS =====================
   unarchive:
-    src: "{{TeamCity_url}}/update/buildAgent.zip"
+    src: "{{item.path}}"
     dest: '{{Tools_path}}'
     with_items:  "{{ ToolsList }}"
     remote_src: yes
