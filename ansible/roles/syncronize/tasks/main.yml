@@ -8,8 +8,8 @@
 - name: ===================== DOWNLOAD TOOLS =====================
   unarchive:
     src: "{{item.path}}"
-    dest: '{{Tools_path}}'
-    with_items:  "{{ ToolsList }}"
+    dest: '{{Tools_path}}'    
     remote_src: yes
-    keep_newer: yes    
+    keep_newer: yes  
+  with_items:  "{{ ToolsList }}"
   become: yes
