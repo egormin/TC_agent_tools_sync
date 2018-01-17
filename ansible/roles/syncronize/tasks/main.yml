@@ -1,9 +1,9 @@
-#- name: ===================== Install libselinux-python =====================
-#  yum:
-#    name: "{{item.name}}"
-#    state: latest
-#  with_items:  "{{ ToolsList }}"
-#  become: yes
+- name: ===================== CHECK IF DIRECTORY '{{Tools_path}}' EXISTS =====================
+  file:
+    path: '{{buildAgent_path}}'
+    state: directory
+    mode: 0755
+  become: yes
   
 - name: ===================== DOWNLOAD TOOLS =====================
   unarchive:
