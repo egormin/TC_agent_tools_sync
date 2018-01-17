@@ -9,6 +9,8 @@
   get_url:
     url: "{{item.path}}"
     dest: "/tmp/{{item.name}}"
+    url_username: __myUser__
+    url_password: __myPassword__
     mode: 0440
   with_items:  "{{ ToolsList }}"
   
