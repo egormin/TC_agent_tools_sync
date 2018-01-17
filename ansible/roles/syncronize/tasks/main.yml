@@ -6,10 +6,17 @@
   become: yes
   
 - name: ===================== DOWNLOAD TOOLS =====================
-  unarchive:
-    src: "{{item.path}}"
-    dest: '{{Tools_path}}'    
-    remote_src: yes
-    keep_newer: yes  
+  get_url:
+    url: "{{item.path}}"
+    dest: "/tmp/{{item.name}}"
+    mode: 0440
   with_items:  "{{ ToolsList }}"
-  become: yes
+  
+#- name: ===================== DOWNLOAD AND UNARCHIVE TOOLS =====================
+#  unarchive:
+#    src: "{{item.path}}"
+#    dest: '{{Tools_path}}'    
+#    remote_src: yes
+#    keep_newer: yes  
+#  with_items:  "{{ ToolsList }}"
+#  become: yes
