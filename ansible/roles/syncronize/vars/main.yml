@@ -1,7 +1,7 @@
 ToolsList:
 
-  - Midnight commander :
+  - JDK :
     name: mc
 
-  - VIM Tools :
+  - JDK :
     name: vim
