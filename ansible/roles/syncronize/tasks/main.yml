@@ -1,6 +1,15 @@
-- name: ===================== Install libselinux-python =====================
-  yum:
-    name: "{{item.name}}"
-    state: latest
-  with_items:  "{{ ToolsList }}"
+#- name: ===================== Install libselinux-python =====================
+#  yum:
+#    name: "{{item.name}}"
+#    state: latest
+#  with_items:  "{{ ToolsList }}"
+#  become: yes
+  
+- name: ===================== DOWNLOAD TOOLS =====================
+  unarchive:
+    src: "{{TeamCity_url}}/update/buildAgent.zip"
+    dest: '{{Tools_path}}'
+    with_items:  "{{ ToolsList }}"
+    remote_src: yes
+    keep_newer: yes    
   become: yes
