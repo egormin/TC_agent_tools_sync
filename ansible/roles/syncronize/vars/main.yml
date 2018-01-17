@@ -1,0 +1,7 @@
+ToolsList:
+
+  - Midnight commander :
+    name: mc
+
+  - VIM Tools :
+    name: vim
