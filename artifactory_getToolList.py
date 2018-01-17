@@ -25,6 +25,7 @@ for i in range(0, len(getdata["children"])):
         tool = getChilddata["children"][j]["uri"]
         print(tool)
         fh.write("  - " + tool[1:].split("-")[0].upper() + ":\n")
-        fh.write("    name: " + tool[1:] + "\n\n")
-
+        fh.write("    name: " + tool[1:] + "\n")
+        fh.write("    path: " + "http://35.192.120.104/artifactory/Tools/gradle/gradle-1.12-bin.zip" + "\n\n")  
+        
 fh.close
