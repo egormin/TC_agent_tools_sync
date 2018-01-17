@@ -24,7 +24,7 @@ for i in range(0, len(getdata["children"])):
     for j in range(0, len(getChilddata["children"])):
         tool = getChilddata["children"][j]["uri"]
         print(tool)
-        fh.write("  - " + tool[1:].split("-")[0].upper() + "\n")
+        fh.write("  - " + tool[1:].split("-")[0].upper() + ":\n")
         fh.write("    name: " + tool[1:] + "\n\n")
 
 fh.close
