@@ -16,7 +16,7 @@
 
 - name: Unarchive a file that is already on the remote machine
   unarchive:
-    src: "{{item.name}}"
+    src: "/tmp/{{item.name}}"
     dest: '{{Tools_path}}'
     remote_src: yes
   with_items:  "{{ ToolsList }}"
