@@ -5,7 +5,7 @@
     mode: 0755
   become: yes
   
-- name: ===================== DOWNLOAD TOOLS =====================
+- name: ===================== DOWNLOAD TOOLS TO /tmp =====================
   get_url:
     url: "{{item.path}}"
     dest: "/tmp/{{item.name}}"
@@ -14,7 +14,7 @@
     mode: 0440
   with_items:  "{{ ToolsList }}"
 
-- name: ===================== UNARCHIVE BUILD TOOLS =====================
+- name: ===================== UNARCHIVE BUILD TOOLS FROM /tmp to '{{Tools_path}}'  =====================
   unarchive:
     src: "/tmp/{{item.name}}"
     dest: '{{Tools_path}}'
