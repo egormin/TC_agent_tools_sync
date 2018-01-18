@@ -13,6 +13,13 @@
     url_password: __myPassword__
     mode: 0440
   with_items:  "{{ ToolsList }}"
+
+- name: Unarchive a file that is already on the remote machine
+  unarchive:
+    src: "{{item.name}}"
+    dest: '{{Tools_path}}'
+    remote_src: yes
+  with_items:  "{{ ToolsList }}"
   
 #- name: ===================== DOWNLOAD AND UNARCHIVE TOOLS =====================
 #  unarchive:
