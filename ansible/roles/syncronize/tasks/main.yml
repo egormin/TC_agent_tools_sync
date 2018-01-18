@@ -20,6 +20,7 @@
     dest: '{{Tools_path}}'
     remote_src: yes
   with_items:  "{{ ToolsList }}"
+  become: yes
   
 #- name: ===================== DOWNLOAD AND UNARCHIVE TOOLS =====================
 #  unarchive:
