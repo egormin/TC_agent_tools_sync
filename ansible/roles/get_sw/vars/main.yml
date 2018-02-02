@@ -1,0 +1,7 @@
+ToolsList:
+
+  - JDK :
+    name: mc
+
+  - JDK :
+    name: vim

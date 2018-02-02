@@ -4,3 +4,4 @@
 
   roles:
   - syncronize
+  - get_sw
