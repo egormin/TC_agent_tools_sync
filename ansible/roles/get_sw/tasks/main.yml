@@ -1,6 +1,6 @@
 - name: ===================== FIND FOLDERS =====================
   find:
-    path: '{{Tools_path}}'
+    paths: '{{Tools_path}}'
     register: files
 
 - name: ===================== SHOW FOLDERS =====================
