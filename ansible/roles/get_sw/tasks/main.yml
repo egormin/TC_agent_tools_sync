@@ -10,4 +10,4 @@
   debug: msg="{{ folder.files | json_query('files."path"') }}"
 
 - name: ===================== BASH ===================== 
-  shell: echo {{ folder.files }}
+  shell: echo {{ folder.files | json_query('uid')}}
