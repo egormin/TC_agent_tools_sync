@@ -15,4 +15,4 @@
 
 - name: ===================== DEBUG =====================
   debug: var=item
-  with_items: "{{folder|json_query('files.path')}}"  
+  with_items: "{{folder|json_query('files')}}"  
