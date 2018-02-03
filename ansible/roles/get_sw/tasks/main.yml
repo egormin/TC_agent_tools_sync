@@ -7,7 +7,7 @@
 
 - name: ===================== SHOW FOLDERS =====================
   #debug: msg="{{ file.file | sort(attribute='ctime') |  list }}"
-  debug: msg="{{ folder | json_query('files."path"') }}"
+  debug: msg="{{ folder.files | json_query('files."path"') }}"
 
 - name: ===================== BASH ===================== 
   shell: echo {{ folder }}
