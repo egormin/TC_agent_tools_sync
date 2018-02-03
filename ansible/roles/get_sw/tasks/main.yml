@@ -3,7 +3,7 @@
     paths: '{{Tools_path}}'
     patterns: '*'
     file_type: directory
-  register: folder
+  register: folder.files
 
 - name: ===================== SHOW FOLDERS =====================
   #debug: msg="{{ file.file | sort(attribute='ctime') |  list }}"
