@@ -3,5 +3,5 @@
   - tc_agent
 
   roles:
-  - syncronize
+  #- syncronize
   - get_sw
