@@ -6,4 +6,5 @@
   register: file
 
 - name: ===================== SHOW FOLDERS =====================
-  debug: msg="{{ file.file | sort(attribute='ctime') |  list }}"
+  #debug: msg="{{ file.file | sort(attribute='ctime') |  list }}"
+  debug: msg="{{ file}}"
