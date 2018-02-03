@@ -17,4 +17,4 @@
   debug: var=item
   with_items: "{{folder|json_query(server_name_cluster1_query)}}"  
   vars:
-    server_name_cluster1_query: "files"
+    server_name_cluster1_query: "files.path"
