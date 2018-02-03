@@ -1,6 +1,7 @@
 - name: ===================== FIND FOLDERS =====================
   find:
     paths: '{{Tools_path}}'
+    patterns: *
 #  register: folders
 
 #- name: ===================== SHOW FOLDERS =====================
