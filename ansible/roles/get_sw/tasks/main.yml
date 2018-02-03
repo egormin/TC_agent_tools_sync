@@ -1,7 +1,7 @@
 - name: ===================== FIND FOLDERS =====================
   find:
     paths: '{{Tools_path}}'
-  register: folders
+#  register: folders
 
-- name: ===================== SHOW FOLDERS =====================
-  debug: msg="{{ folders.folders | sort(attribute='ctime') |  list }}"
+#- name: ===================== SHOW FOLDERS =====================
+#  debug: msg="{{ folders.folders | sort(attribute='ctime') |  list }}"
