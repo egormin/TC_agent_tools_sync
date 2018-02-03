@@ -7,4 +7,4 @@
 
 - name: ===================== SHOW FOLDERS =====================
   #debug: msg="{{ file.file | sort(attribute='ctime') |  list }}"
-  debug: msg="{{ folder.files | map(attribute='path') | list }}"
+  debug: msg="{{ folder | json_query('files.path' }}"
