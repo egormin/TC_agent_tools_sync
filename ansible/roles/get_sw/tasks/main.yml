@@ -11,3 +11,10 @@
 
 - name: ===================== BASH ===================== 
   shell: echo {{ folder.files }} | grep path
+
+
+- name: ===================== DEBUG =====================
+  debug: var=item
+  with_items: "{{folder.files|json_query(files)}}"
+  vars:
+    server_name_cluster1_query: "path"
