@@ -1,5 +1,5 @@
 [build_agents]
-10.6.98.4 ansible_python_interpreter=/usr/bin/python27
+10.6.98.4
 10.6.98.43
 
 [All_servers:children]
