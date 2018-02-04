@@ -28,6 +28,12 @@
   with_items:  "{{ ToolsList }}"
   become: yes
 
+- name: ===================== Python =====================
+  shell: python27 script.py
+  #with_items:  "{{ ToolsList }}"
+  with_items:  "{{ ToolsList }}"
+  become: yes
+
 - name: ===================== Check files  =====================
   shell: echo "SW  {{ item.name }}"
   with_items:  "{{ ToolsList }}"
