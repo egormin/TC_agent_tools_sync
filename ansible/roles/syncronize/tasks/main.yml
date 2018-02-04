@@ -29,7 +29,7 @@
   become: yes
 
 - name: ===================== Python =====================
-  shell: python27 script.py
+  shell: ls; python27 script.py
   #with_items:  "{{ ToolsList }}"
   with_items:  "{{ ToolsList }}"
   become: yes
