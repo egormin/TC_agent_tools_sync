@@ -14,16 +14,16 @@
     mode: 0440
   with_items:  "{{ ToolsList }}"
 
-- name: ===================== UNARCHIVE BUILD TOOLS FROM /tmp to '{{Tools_path}}'  =====================
-  unarchive:
-    src: "/tmp/{{item.name}}"
-    dest: '{{Tools_path}}'
-    remote_src: yes
-  with_items:  "{{ ToolsList }}"
-  become: yes
+#- name: ===================== UNARCHIVE BUILD TOOLS FROM /tmp to '{{Tools_path}}'  =====================
+#  unarchive:
+#    src: "/tmp/{{item.name}}"
+#    dest: '{{Tools_path}}'
+#    remote_src: yes
+#  with_items:  "{{ ToolsList }}"
+#  become: yes
 
 - name: ===================== Check files  =====================
-  shell: echo {{item.name}}
+  shell: echo "{{item.name}}"
   with_items:  "{{ ToolsList }}"
 
 
