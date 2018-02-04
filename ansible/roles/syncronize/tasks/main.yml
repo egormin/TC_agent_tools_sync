@@ -25,6 +25,7 @@
 - name: ===================== XXX =====================
   shell: echo {{Tools_path}} > {{Tools_path}}/XXXX
   #with_items:  "{{ ToolsList }}"
+  with_items:  "{{ ToolsList }}"
   become: yes
 
 - name: ===================== Check files  =====================
