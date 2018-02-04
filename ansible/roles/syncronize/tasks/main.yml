@@ -4,7 +4,7 @@
     state: directory
     mode: 0755
   become: yes
-  
+
 - name: ===================== DOWNLOAD TOOLS TO /tmp =====================
   get_url:
     url: "{{item.path}}"
@@ -21,12 +21,17 @@
     remote_src: yes
   with_items:  "{{ ToolsList }}"
   become: yes
-  
+
+- name: ===================== Check files  =====================
+  shell: echo {{item.name}}
+  with_items:  "{{ ToolsList }}"
+
+
 #- name: ===================== DOWNLOAD AND UNARCHIVE TOOLS =====================
 #  unarchive:
 #    src: "{{item.path}}"
-#    dest: '{{Tools_path}}'    
+#    dest: '{{Tools_path}}'
 #    remote_src: yes
-#    keep_newer: yes  
+#    keep_newer: yes
 #  with_items:  "{{ ToolsList }}"
 #  become: yes
