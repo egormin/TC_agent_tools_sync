@@ -23,8 +23,8 @@
 #  become: yes
 
 - name: ===================== XXX =====================
-  shell: echo "XXXXXX"
-  with_items:  "{{ ToolsList }}"
+  shell: echo "XXXXXX > {{Tools_path}}/XXX"
+  #with_items:  "{{ ToolsList }}"
 
 - name: ===================== Check files  =====================
   shell: echo "SW  {{ item.name }}"
