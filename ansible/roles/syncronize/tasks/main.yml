@@ -23,7 +23,7 @@
 #  become: yes
 
 - name: ===================== XXX =====================
-  shell: echo XXXXXX > {{Tools_path}}/XXXX
+  shell: echo {{Tools_path}} > {{Tools_path}}/XXXX
   #with_items:  "{{ ToolsList }}"
   become: yes
 
