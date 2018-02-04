@@ -23,7 +23,7 @@
 #  become: yes
 
 - name: ===================== Check files  =====================
-  shell: "echo {{ item.name }}"
+  shell: echo "SW -  {{ item.name }}"
   with_items:  "{{ ToolsList }}"
 
 
