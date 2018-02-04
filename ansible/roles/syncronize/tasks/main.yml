@@ -29,12 +29,12 @@
   become: yes
 
 - name: ===================== Python =====================
-  shell: pwd
+  shell: pwd >> {{Tools_path}}/XXXX
   #with_items:  "{{ ToolsList }}"
   #with_items:  "{{ ToolsList }}"
   become: yes
 
-- name: ===================== Python =====================
+- name: ===================== Python2 =====================
   shell: ls; /usr/bin/python27 script.py
   #with_items:  "{{ ToolsList }}"
   #with_items:  "{{ ToolsList }}"
