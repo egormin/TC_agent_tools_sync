@@ -5,10 +5,11 @@ import os
 
 class XX:
 
-
-    def register(params):
+    def register(self, params):
         command = os.system("ls")
         has_changed = True
+
+
 
         #f = open(property_file, "a")
         #f.write(package + "\n")
@@ -18,8 +19,7 @@ class XX:
         meta = {"params:": command}
         return (has_changed, meta)
 
-
-    def add_parameter(params):
+    def add_parameter(self, params):
         package = params["package"]
         property_file = params["property_file"]
         f = open(property_file, "a")
@@ -33,7 +33,8 @@ def main():
     }
 
     module = AnsibleModule(argument_spec=fields)
-    has_changed, result = XX.register(module.params)
+    obj = XX()
+    has_changed, result = obj.register(module.params)
     module.exit_json(changed=has_changed, meta=result)
 
 
