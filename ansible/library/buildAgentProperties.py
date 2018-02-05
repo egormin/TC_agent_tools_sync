@@ -5,7 +5,7 @@ import os
 
 
 def register(params):
-    
+
   package = params["package"]
   has_changed = True
 

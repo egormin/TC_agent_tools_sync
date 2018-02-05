@@ -16,7 +16,8 @@
 
 - name: ===================== ADD VARIABLE IN buildAgent.property =====================
   buildAgentProperties:
-    package: "gradle-3.5"
+    package: "{{item.name}}"
+  with_items:  "{{ ToolsList }}"
   register: result
 
 - name: = OUT =
