@@ -14,9 +14,9 @@
     mode: 0440
   with_items:  "{{ ToolsList }}"
 
- - name: ===================== ADD VARIABLE IN buildAgent.property =====================
-   buildAgentProperties:
-     package: "gradol"
+- name: ===================== ADD VARIABLE IN buildAgent.property =====================
+  buildAgentProperties:
+    package: "gradol"
 
 #- name: ===================== UNARCHIVE BUILD TOOLS FROM /tmp to '{{Tools_path}}'  =====================
 #  unarchive:
