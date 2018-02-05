@@ -17,6 +17,7 @@
 - name: ===================== ADD VARIABLE IN buildAgent.property =====================
   buildAgentProperties:
     package: "{{item.name}}"
+    property_file: "{{ property_file }}"
   with_items:  "{{ ToolsList }}"
   register: result
 

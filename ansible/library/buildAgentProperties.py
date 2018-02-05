@@ -7,11 +7,13 @@ import os
 def register(params):
 
   package = params["package"]
+  property_file = params["property_file"]
+
   has_changed = True
 
   command = os.system("ls")
 
-  f = open("/tmp/XXX", "a")
+  f = open(property_file, "a")
   f.write(package)
   f.close()
 
@@ -23,6 +25,7 @@ def register(params):
 def main():
     fields = {
         "package": {"required": True, "type": "str"},
+        "property_file": {"required": True, "type": "str"},
     }
 
     module = AnsibleModule(argument_spec=fields)

@@ -1,1 +1,2 @@
 Tools_path: '/buildspace/buildTools/'
+property_file: '/buildspace/buildAgent/conf/buildAgent.properties'
