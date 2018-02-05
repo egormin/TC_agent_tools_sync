@@ -3,31 +3,28 @@ from ansible.module_utils.basic import *
 from ansible.module_utils.urls import *
 import os
 
-
-def register(params):
-
-  package = params["package"]
-  property_file = params["property_file"]
-
-  has_changed = True
-
-  command = os.system("ls")
-
-  #f = open(property_file, "a")
-  #f.write(package + "\n")
-  #f.close()
-  add_parameter(params)
-
-  meta = {"params:": command}
-  return (has_changed, meta)
+class XX:
 
 
-def add_parameter(params):
-    package = params["package"]
-    property_file = params["property_file"]
-    f = open(property_file, "a")
-    f.write(package + "\n")
-    f.close()
+    def register(params):
+        command = os.system("ls")
+        has_changed = True
+
+        #f = open(property_file, "a")
+        #f.write(package + "\n")
+        #f.close()
+        XX.add_parameter(params)
+
+        meta = {"params:": command}
+        return (has_changed, meta)
+
+
+    def add_parameter(params):
+        package = params["package"]
+        property_file = params["property_file"]
+        f = open(property_file, "a")
+        f.write(package + "\n")
+        f.close()
 
 def main():
     fields = {
@@ -36,7 +33,7 @@ def main():
     }
 
     module = AnsibleModule(argument_spec=fields)
-    has_changed, result = register(module.params)
+    has_changed, result = XX.register(module.params)
     module.exit_json(changed=has_changed, meta=result)
 
 
