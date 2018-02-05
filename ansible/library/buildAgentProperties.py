@@ -14,7 +14,7 @@ class XX:
         #f = open(property_file, "a")
         #f.write(package + "\n")
         #f.close()
-        XX.add_parameter(params)
+        XX.add_parameter(self, params)
 
         meta = {"params:": command}
         return (has_changed, meta)
