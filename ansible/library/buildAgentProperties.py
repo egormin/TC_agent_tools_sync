@@ -5,8 +5,8 @@ import os
 
 
 def register(params):
-
-
+    
+  package = params["package"]
   has_changed = True
 
   command = os.system("ls")
