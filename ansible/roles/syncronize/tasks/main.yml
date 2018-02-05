@@ -17,6 +17,10 @@
 - name: ===================== ADD VARIABLE IN buildAgent.property =====================
   buildAgentProperties:
     package: "gradol"
+  register: result
+
+ - name: = OUT =
+   debug: var=result
 
 #- name: ===================== UNARCHIVE BUILD TOOLS FROM /tmp to '{{Tools_path}}'  =====================
 #  unarchive:
