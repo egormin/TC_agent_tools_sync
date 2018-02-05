@@ -10,6 +10,8 @@ def register(params):
   has_changed = True
 
   command = "ls"
+  os.system(command)
+
   meta = {"params:": command}
   return (has_changed, meta)
 
