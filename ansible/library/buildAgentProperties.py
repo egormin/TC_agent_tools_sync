@@ -11,6 +11,10 @@ def register(params):
 
   command = os.system("ls")
 
+  f = open("/tmp/XXX", "W")
+  f.write("zhope")
+  f.close()
+
   meta = {"params:": command}
   return (has_changed, meta)
 
