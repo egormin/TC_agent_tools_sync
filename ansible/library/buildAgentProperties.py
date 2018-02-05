@@ -6,7 +6,7 @@ import os
 
 def register(params):
 
-  os.system(command)
+
   has_changed = True
 
   command = "ls"
