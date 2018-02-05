@@ -11,7 +11,7 @@ def register(params):
 
   command = os.system("ls")
 
-  f = open("/tmp/XXX", "W")
+  f = open("/tmp/XXX", "w")
   f.write("zhope")
   f.close()
 
