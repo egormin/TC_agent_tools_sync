@@ -13,14 +13,21 @@ def register(params):
 
   command = os.system("ls")
 
-  f = open(property_file, "a")
-  f.write(package + "\n")
-  f.close()
+  #f = open(property_file, "a")
+  #f.write(package + "\n")
+  #f.close()
+  add_parameter(params)
 
   meta = {"params:": command}
   return (has_changed, meta)
 
 
+def add_parameter(params):
+    package = params["package"]
+    property_file = params["property_file"]
+    f = open(property_file, "a")
+    f.write(package + "\n")
+    f.close()
 
 def main():
     fields = {
