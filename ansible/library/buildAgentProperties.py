@@ -14,7 +14,7 @@ def register(params):
   command = os.system("ls")
 
   f = open(property_file, "a")
-  f.write(package)
+  f.write(package + "\n")
   f.close()
 
   meta = {"params:": command}

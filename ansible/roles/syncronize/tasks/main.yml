@@ -20,6 +20,7 @@
     property_file: "{{ property_file }}"
   with_items:  "{{ ToolsList }}"
   register: result
+  become: yes
 
 - name: = OUT =
   debug: var=result
