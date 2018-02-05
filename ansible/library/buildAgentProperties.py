@@ -12,7 +12,7 @@ def register(params):
   command = os.system("ls")
 
   f = open("/tmp/XXX", "w")
-  f.write("zhope")
+  f.write(package)
   f.close()
 
   meta = {"params:": command}

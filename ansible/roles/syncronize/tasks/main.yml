@@ -16,7 +16,7 @@
 
 - name: ===================== ADD VARIABLE IN buildAgent.property =====================
   buildAgentProperties:
-    package: "gradol"
+    package: "gradle-3.5"
   register: result
 
 - name: = OUT =
