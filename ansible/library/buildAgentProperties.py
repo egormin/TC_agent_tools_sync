@@ -11,7 +11,7 @@ def register(params):
 
   command = os.system("ls")
 
-  f = open("/tmp/XXX", "w")
+  f = open("/tmp/XXX", "a")
   f.write(package)
   f.close()
 
