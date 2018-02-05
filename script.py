@@ -1,5 +1,6 @@
 
 import sys
+import re
 
 
 def main():
@@ -28,17 +29,29 @@ def find_variable(var, file_name):
 
 def add_variable(var, file_name):
     print("added")
-    f = open(file_name, "r")
-    lines = f.readlines()
-    print(len(lines))
-    for i in range(len(lines)):
-        print(lines[i])
-        if lines[i].startswith("# Specific Environment"):
-            lines[i] = lines[i] + "Include below\n"
-            #lines.insert(i + 1, "Inserted text")  # Before the line three lines after this, i.e. 2
+    with open(file_name, 'r') as f:
+        lines = f.readlines()
 
-        f.write(lines)
-    f.close()
+    with open(file_name, 'w') as f:
+        for i, line in enumerate(lines):
+            if line == "# Specific Environment Variables\n":
+                f.write(line)
+                f.write(row_generator(var))
+            else:
+                f.write(line)
+
+
+def row_generator(var):
+    var = var[::-1].replace('-', '_', 1)[::-1]
+
+    corrected_row = "system.tools."
+    for i in range(len(var)):
+        corrected_row += var[i].upper() if var[i].isalpha() else var[i]
+
+    corrected_row += "=/buildspace/buildTools/" + var + "\n"
+    print(corrected_row)
+    return corrected_row
+
 
 
 if __name__ == "__main__":
