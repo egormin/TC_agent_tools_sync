@@ -32,7 +32,7 @@
   buildAgentProperties:
     package: "{{item.name}}"
     property_file: "{{ property_file }}"
-  with_items:  "{{ ToolsList }}"
+  with_items:  "{{ folder_list }}"
   register: result
   become: yes
 
