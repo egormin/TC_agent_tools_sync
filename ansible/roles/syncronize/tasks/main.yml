@@ -23,7 +23,7 @@
 
 - name: = == OUT == =
   debug: var="{{ item }}"
-  with_items: "{{ folder_list }}"
+  with_items: "{{ folder_list.files }}"
 
 - name: = == LOOP== =
   debug: var="{{ folder_list.files }}"
