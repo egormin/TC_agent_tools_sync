@@ -8,8 +8,12 @@ class Analyse:
 
     def __init__(self, params):
         self.params = params
+        self.property_file = params["property_file"]
 
     def check(self):
+        from_file = open(property_file, "r")
+        line = from_file.readline()
+        from_file.close()
 
         return True
 
