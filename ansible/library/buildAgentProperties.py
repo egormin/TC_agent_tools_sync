@@ -61,7 +61,7 @@ def main():
 
     has_changed = False
     if Analyse(module.params).check():
-       result = {"params:": "ok"}
+       result = {"params:": "package is already added"}
     else:
        result = Analyse(module.params).add_parameter()
        has_changed = True
