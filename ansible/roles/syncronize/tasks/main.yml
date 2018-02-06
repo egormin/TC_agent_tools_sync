@@ -31,7 +31,7 @@
     property_file: "{{ property_file }}"
   with_items:  "{{ folder_list.files }}"
   #register: result
-  no_log: True
+  #no_log: True
   become: yes
 
 
