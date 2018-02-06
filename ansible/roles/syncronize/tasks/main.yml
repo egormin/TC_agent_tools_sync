@@ -21,8 +21,12 @@
     file_type: directory
   register: folder_list
 
-- name: = OUT =
+- name: = == OUT == =
   debug: var=folder_list
+
+- name: = == LOOP== =
+  debug: var="{{ folder_list.path }}"
+  with_items:  "{{ folder_list }}"
 
 - name: ===================== ADD VARIABLE IN buildAgent.property =====================
   buildAgentProperties:
