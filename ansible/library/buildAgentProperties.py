@@ -36,7 +36,7 @@ class Analyse:
 
     @staticmethod
     def __row_generator(var):
-        var = var[::-1].replace('-', '_', 1)[::-1]
+        #var = var[::-1].replace('-', '_', 1)[::-1]
         corrected_row = "system.tools."
         for i in range(len(var)):
             corrected_row += var[i].upper() if var[i].isalpha() else var[i]
