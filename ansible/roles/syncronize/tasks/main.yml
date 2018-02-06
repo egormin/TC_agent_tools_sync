@@ -25,8 +25,8 @@
 #  debug: var=folder_list.files[1].path
 
 - name: = == LOOP== =
-  debug: var="{{ folder_list }}"
-  with_dict:  "{{ folder_list }}"
+  debug: var="{{ folder_list.files }}"
+  with_dict:  "{{ folder_list.files }}"
 
 - name: ===================== ADD VARIABLE IN buildAgent.property =====================
   buildAgentProperties:
