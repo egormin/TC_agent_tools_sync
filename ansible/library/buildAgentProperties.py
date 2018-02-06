@@ -16,7 +16,7 @@ class Analyse:
         #Analyse.add_parameter(self.params)
 
         meta = {"params:": command}
-        return has_changed, meta
+        return True
 
     def add_parameter(self):
         has_changed = True
@@ -39,7 +39,7 @@ def main():
     # obj = Analyse(params)
 
     if Analyse(module.params).check():
-        has_changed = false, result = {"params:": "ok"}
+        has_changed = True, result = {"params:": "ok"}
     else:
         has_changed, result = Analyse(module.params).add_parameter()
 
