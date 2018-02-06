@@ -7,7 +7,6 @@ import os
 class Analyse:
 
     def __init__(self, params):
-        self.params = params
         self.property_file = params["property_file"]
         self.package = params["package"].split("-")[0] + "-" + params["package"].split("-")[1]
 
@@ -23,10 +22,10 @@ class Analyse:
 
     def add_parameter(self):
         has_changed = True
-        package = params["package"]
-        property_file = params["property_file"]
-        f = open(property_file, "a")
-        f.write(package + "\n")
+        #package = params["package"]
+        #property_file = params["property_file"]
+        f = open(self.property_file, "a")
+        f.write(self.package + "\n")
         f.close()
         meta = {"params:": "Added"}
         return has_changed, meta
