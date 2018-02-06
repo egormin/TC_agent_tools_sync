@@ -61,9 +61,8 @@ def main():
        result = Analyse(module.params).add_parameter()
        has_changed = True
 
-
     # module.exit_json(changed=has_changed, meta=result)
-    module.exit_json(changed=has_changed)
+    module.exit_json(changed=has_changed, meta=result)
 
 
 if __name__ == "__main__":
