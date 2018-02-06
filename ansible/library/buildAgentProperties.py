@@ -36,7 +36,7 @@ def main():
 
     module = AnsibleModule(argument_spec=fields)
     #obj = Analyse(params)
-    has_changed, result = Analyse(params).check()
+    has_changed, result = Analyse(module.params).check()
     module.exit_json(changed=has_changed, meta=result)
 
 
