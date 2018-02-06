@@ -3,28 +3,30 @@ from ansible.module_utils.basic import *
 from ansible.module_utils.urls import *
 import os
 
-class XX:
 
-    def register(self, params):
+class Analyse:
+
+    def __init__(self, params):
+        self.params = params
+        self.has_changed = False
+
+    def check(self):
         command = os.system("ls")
-        has_changed = True
 
-
-
-        #f = open(property_file, "a")
-        #f.write(package + "\n")
-        #f.close()
-        XX.add_parameter(self, params)
+        add_parameter(self, params)
 
         meta = {"params:": command}
-        return (has_changed, meta)
+        return has_changed, meta
 
-    def add_parameter(self, params):
+    def add_parameter(self):
+        has_changed = True
         package = params["package"]
         property_file = params["property_file"]
         f = open(property_file, "a")
         f.write(package + "\n")
         f.close()
+        return has_changed, meta
+
 
 def main():
     fields = {
@@ -33,8 +35,8 @@ def main():
     }
 
     module = AnsibleModule(argument_spec=fields)
-    obj = XX()
-    has_changed, result = obj.register(module.params)
+    #obj = Analyse(params)
+    has_changed, result = Analyse(params).check()
     module.exit_json(changed=has_changed, meta=result)
 
 
