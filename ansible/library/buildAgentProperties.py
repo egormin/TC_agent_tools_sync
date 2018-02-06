@@ -60,14 +60,14 @@ def main():
     module = AnsibleModule(argument_spec=fields)
 
     has_changed = False
-    # if Analyse(module.params).check():
-    #    result = {"params:": "ok"}
-    # else:
-    #    result = Analyse(module.params).add_parameter()
-    #    has_changed = True
+    if Analyse(module.params).check():
+       result = {"params:": "ok"}
+    else:
+       result = Analyse(module.params).add_parameter()
+       has_changed = True
 
-    result = Analyse(module.params).add_parameter()
-    has_changed = True
+    #result = Analyse(module.params).add_parameter()
+    #has_changed = True
     #result = test(module.params)
 
     module.exit_json(changed=has_changed, meta=result)

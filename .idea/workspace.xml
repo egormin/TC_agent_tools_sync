@@ -32,8 +32,8 @@
       <file leaf-file-name="buildAgentProperties.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ansible/library/buildAgentProperties.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+            <state relative-caret-position="468">
+              <caret line="62" column="38" lean-forward="true" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
               <folding>
                 <element signature="e#1#41#0" expanded="true" />
               </folding>
@@ -407,8 +407,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ansible/library/buildAgentProperties.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        <state relative-caret-position="468">
+          <caret line="62" column="38" lean-forward="true" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
           <folding>
             <element signature="e#1#41#0" expanded="true" />
           </folding>
