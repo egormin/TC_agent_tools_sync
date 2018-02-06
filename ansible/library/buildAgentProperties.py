@@ -45,6 +45,11 @@ class Analyse:
         return corrected_row
 
 
+def test(params):
+    package = params["package"]
+    return package
+
+
 def main():
     fields = {
         "package": {"required": True, "type": "str"},
@@ -54,11 +59,13 @@ def main():
     module = AnsibleModule(argument_spec=fields)
 
     has_changed = False
-    if Analyse(module.params).check():
-        result = {"params:": "ok"}
-    else:
-        result = Analyse(module.params).add_parameter()
-        has_changed = True
+    #if Analyse(module.params).check():
+    #    result = {"params:": "ok"}
+    #else:
+    #    result = Analyse(module.params).add_parameter()
+    #    has_changed = True
+
+    result = test(module.params)
 
     module.exit_json(changed=has_changed, meta=result)
 
