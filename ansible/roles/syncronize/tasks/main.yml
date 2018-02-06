@@ -26,13 +26,13 @@
 
 - name: = == LOOP== =
   debug: var="{{ folder_list.files }}"
-  with_items:  "{{ folder_list }}"
+  with_dict:  "{{ folder_list }}"
 
 - name: ===================== ADD VARIABLE IN buildAgent.property =====================
   buildAgentProperties:
-    package: "{{item.files}}"
+    package: "{{item}}"
     property_file: "{{ property_file }}"
-  with_items:  "{{ folder_list }}"
+  with_dict:  "{{ folder_list }}"
   register: result
   become: yes
 
