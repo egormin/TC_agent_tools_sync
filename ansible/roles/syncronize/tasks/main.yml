@@ -19,7 +19,7 @@
   find:
     paths: '{{Tools_path}}'
     file_type: directory
-  register: folder_list
+  register: folder_list.files
 
 - name: = == OUT == =
   debug: var="{{ item }}"
