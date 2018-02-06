@@ -22,10 +22,10 @@
   register: folder_list
 
 - name: = == OUT == =
-  debug: var=folder_list
+  debug: var=folder_list.files
 
 - name: = == LOOP== =
-  debug: var="{{ folder_list.files }}"
+  debug: var="{{ folder_list }}"
   with_dict:  "{{ folder_list }}"
 
 - name: ===================== ADD VARIABLE IN buildAgent.property =====================
