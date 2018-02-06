@@ -38,8 +38,9 @@ def main():
     module = AnsibleModule(argument_spec=fields)
     # obj = Analyse(params)
 
+    has_changed = False
     if Analyse(module.params).check():
-        has_changed = True, result = {"params:": "ok"}
+        result = {"params:": "ok"}
     else:
         has_changed, result = Analyse(module.params).add_parameter()
 
