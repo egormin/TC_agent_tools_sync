@@ -1,7 +1,7 @@
 
 from ansible.module_utils.basic import *
 from ansible.module_utils.urls import *
-import os
+#import os
 
 
 class Analyse:
@@ -21,14 +21,38 @@ class Analyse:
         return False
 
     def add_parameter(self):
-        has_changed = True
+        # has_changed = True
+        with open(self.property_file, 'r') as f:
+            lines = f.readlines()
+
+        with open(self.property_file, 'w') as f:
+            for i, line in enumerate(lines):
+                if line == "# Specific Environment Variables\n":
+                    f.write(line)
+                    f.write(Analyse.__row_generator(self.package))
+                else:
+                    f.write(line)
+
+        return "added!"
+
+    @staticmethod
+    def __row_generator(var):
+        var = var[::-1].replace('-', '_', 1)[::-1]
+        corrected_row = "system.tools."
+        for i in range(len(var)):
+            corrected_row += var[i].upper() if var[i].isalpha() else var[i]
+
+        corrected_row += "=/buildspace/buildTools/" + var + "\n"
+        print(corrected_row)
+        return corrected_row
+
         #package = params["package"]
         #property_file = params["property_file"]
-        f = open(self.property_file, "a")
-        f.write(self.package + "\n")
-        f.close()
-        meta = {"params:": "Added"}
-        return has_changed, meta
+        #f = open(self.property_file, "a")
+        #f.write(self.package + "\n")
+        #f.close()
+        #meta = {"params:": "Added"}
+        #return has_changed, meta
 
 
 def main():
@@ -44,7 +68,8 @@ def main():
     if Analyse(module.params).check():
         result = {"params:": "ok"}
     else:
-        result = {"params:": "NO such param"}
+        result = Analyse(module.params).add_parameter()
+        has_changed = True
         #has_changed, result = Analyse(module.params).add_parameter()
 
     #has_changed, result = Analyse(module.params).check()

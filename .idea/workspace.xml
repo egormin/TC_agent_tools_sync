@@ -19,8 +19,8 @@
       <file leaf-file-name="script.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/script.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+            <state relative-caret-position="450">
+              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="52" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -29,8 +29,8 @@
       <file leaf-file-name="buildAgentProperties.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ansible/library/buildAgentProperties.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="23" column="26" lean-forward="true" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+            <state relative-caret-position="582">
+              <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding>
                 <element signature="e#1#41#0" expanded="true" />
               </folding>
@@ -328,14 +328,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ansible/syncronizeTC_agentToolset.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -348,14 +340,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -376,10 +360,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="52" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ansible/library/buildAgentProperties.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="26" lean-forward="true" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        <state relative-caret-position="582">
+          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding>
             <element signature="e#1#41#0" expanded="true" />
           </folding>
