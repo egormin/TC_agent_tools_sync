@@ -31,9 +31,9 @@
 
 - name: ===================== ADD VARIABLE IN buildAgent.property =====================
   buildAgentProperties:
-    package: "{{item}}"
+    package: "{{item.path}}"
     property_file: "{{ property_file }}"
-  with_dict:  "{{ folder_list.files }}"
+  with_items:  "{{ folder_list.files }}"
   register: result
   become: yes
 
