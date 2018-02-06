@@ -25,6 +25,7 @@ class Analyse:
         f = open(property_file, "a")
         f.write(package + "\n")
         f.close()
+        meta = {"params:": "Added"}
         return has_changed, meta
 
 
@@ -35,8 +36,14 @@ def main():
     }
 
     module = AnsibleModule(argument_spec=fields)
-    #obj = Analyse(params)
-    has_changed, result = Analyse(module.params).check()
+    # obj = Analyse(params)
+
+    if Analyse(module.params).check():
+        has_changed = false, result = {"params:": "ok"}
+    else:
+        has_changed, result = Analyse(module.params).add_parameter()
+
+    #has_changed, result = Analyse(module.params).check()
     module.exit_json(changed=has_changed, meta=result)
 
 
