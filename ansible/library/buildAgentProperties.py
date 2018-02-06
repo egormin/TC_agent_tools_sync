@@ -9,13 +9,17 @@ class Analyse:
     def __init__(self, params):
         self.params = params
         self.property_file = params["property_file"]
+        self.package = params["package"]
 
     def check(self):
         from_file = open(self.property_file, "r")
         line = from_file.readline()
+        while line:
+            if self.package in line:
+                return True
+            line = from_file.readline()
         from_file.close()
-
-        return True
+        return False
 
     def add_parameter(self):
         has_changed = True
@@ -41,7 +45,8 @@ def main():
     if Analyse(module.params).check():
         result = {"params:": "ok"}
     else:
-        has_changed, result = Analyse(module.params).add_parameter()
+        result = {"params:": "NO such param"}
+        #has_changed, result = Analyse(module.params).add_parameter()
 
     #has_changed, result = Analyse(module.params).check()
     module.exit_json(changed=has_changed, meta=result)
