@@ -21,9 +21,9 @@
     file_type: directory
   register: folder_list
 
-- name: = == OUT == =
-  debug: var="{{item.path}}"
-  with_items: "{{ folder_list }}"
+#- name: = == OUT == =
+ # debug: var="{{item.path}}"
+ # with_items: "{{ folder_list }}"
 
 - name: = == LOOP== =
   debug: var="{{ folder_list.files }}"
