@@ -25,14 +25,14 @@
   debug: var=folder_list
 
 - name: = == LOOP== =
-  debug: var="{{ folder_list.files.value }}"
+  debug: var="{{ folder_list.files }}"
   with_dict:  "{{ folder_list }}"
 
 - name: ===================== ADD VARIABLE IN buildAgent.property =====================
   buildAgentProperties:
     package: "{{item}}"
     property_file: "{{ property_file }}"
-  with_dict:  "{{ folder_list }}"
+  with_dict:  "{{ folder_list.files }}"
   register: result
   become: yes
 
