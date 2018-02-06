@@ -1,7 +1,6 @@
 
 from ansible.module_utils.basic import *
 from ansible.module_utils.urls import *
-#import os
 
 
 class Analyse:
@@ -21,7 +20,6 @@ class Analyse:
         return False
 
     def add_parameter(self):
-        # has_changed = True
         with open(self.property_file, 'r') as f:
             lines = f.readlines()
 
@@ -42,17 +40,9 @@ class Analyse:
         for i in range(len(var)):
             corrected_row += var[i].upper() if var[i].isalpha() else var[i]
 
-        corrected_row += "=/buildspace/buildTools/" + var + "\n"
+        corrected_row += "=/buildspace/buildTools/" + var.replace("_", "-") + "\n"
         print(corrected_row)
         return corrected_row
-
-        #package = params["package"]
-        #property_file = params["property_file"]
-        #f = open(self.property_file, "a")
-        #f.write(self.package + "\n")
-        #f.close()
-        #meta = {"params:": "Added"}
-        #return has_changed, meta
 
 
 def main():
@@ -62,7 +52,6 @@ def main():
     }
 
     module = AnsibleModule(argument_spec=fields)
-    # obj = Analyse(params)
 
     has_changed = False
     if Analyse(module.params).check():
@@ -70,9 +59,7 @@ def main():
     else:
         result = Analyse(module.params).add_parameter()
         has_changed = True
-        #has_changed, result = Analyse(module.params).add_parameter()
 
-    #has_changed, result = Analyse(module.params).check()
     module.exit_json(changed=has_changed, meta=result)
 
 
