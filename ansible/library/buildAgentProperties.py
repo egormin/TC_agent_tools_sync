@@ -41,14 +41,9 @@ class Analyse:
         for i in range(len(var)):
             corrected_row += var[i].upper() if var[i].isalpha() else var[i]
 
-        corrected_row += "=/buildspace/buildTools/" + var.replace("_", "-") + "\n"
+        corrected_row += "=/buildspace/buildTools/" + var + "\n"
         print(corrected_row)
         return corrected_row
-
-
-def test(params):
-    package = params["package"]
-    return package
 
 
 def main():
@@ -66,11 +61,9 @@ def main():
        result = Analyse(module.params).add_parameter()
        has_changed = True
 
-    #result = Analyse(module.params).add_parameter()
-    #has_changed = True
-    #result = test(module.params)
 
-    module.exit_json(changed=has_changed, meta=result)
+    # module.exit_json(changed=has_changed, meta=result)
+    module.exit_json(changed=has_changed)
 
 
 if __name__ == "__main__":
