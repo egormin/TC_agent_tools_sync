@@ -13,7 +13,7 @@ class Analyse:
     def check(self):
         command = os.system("ls")
 
-        Analyse.add_parameter(params)
+        Analyse.add_parameter(self.params)
 
         meta = {"params:": command}
         return has_changed, meta
