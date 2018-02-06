@@ -8,14 +8,9 @@ class Analyse:
 
     def __init__(self, params):
         self.params = params
-        self.has_changed = False
 
     def check(self):
-        command = os.system("ls")
 
-        #Analyse.add_parameter(self.params)
-
-        meta = {"params:": command}
         return True
 
     def add_parameter(self):
