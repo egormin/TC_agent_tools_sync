@@ -22,7 +22,7 @@
   register: folder_list
 
 - name: = == OUT == =
-  debug: var=folder_list.files.path
+  debug: var=folder_list.files
 
 - name: = == LOOP== =
   debug: var="{{ folder_list }}"
