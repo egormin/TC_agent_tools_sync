@@ -7,7 +7,8 @@ class Analyse:
 
     def __init__(self, params):
         self.property_file = params["property_file"]
-        self.package = params["package"].split("-")[0] + "-" + params["package"].split("-")[1]
+        #self.package = params["package"].split("-")[0] + "-" + params["package"].split("-")[1]
+        self.package = params["package"]
 
     def check(self):
         from_file = open(self.property_file, "r")
