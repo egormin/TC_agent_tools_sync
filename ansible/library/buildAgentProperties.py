@@ -11,7 +11,7 @@ class Analyse:
         self.property_file = params["property_file"]
 
     def check(self):
-        from_file = open(property_file, "r")
+        from_file = open(self.property_file, "r")
         line = from_file.readline()
         from_file.close()
 
