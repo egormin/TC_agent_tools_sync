@@ -21,9 +21,13 @@
     file_type: directory
   register: folder_list
 
-#- name: = == LOOP== =
-#  debug: var="{{ folder_list.files }}"
-#  with_items:  "{{ folder_list.files }}"
+- name: ===================== UNARCHIVE BUILD TOOLS FROM /tmp to '{{Tools_path}}'  =====================
+  unarchive:
+    src: "/tmp/{{item.name}}"
+    dest: '{{Tools_path}}'
+    remote_src: yes
+  with_items:  "{{ ToolsList }}"
+  become: yes
 
 - name: ===================== ADD VARIABLE IN buildAgent.property =====================
   buildAgentProperties:
