@@ -2,4 +2,4 @@
   - 10.6.98.4
 
   pre_tasks:
-  - shell: echo '{{text}}'
+  - shell: "echo {{ text }}"
