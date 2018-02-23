@@ -11,7 +11,7 @@
   
   - name: ==================== TC agent '{{param}}' =================
     service:
-      name: iptables
+      name: teamcity-agent
       #pattern: /etc/init.d
       state: '{{param}}'
       #state: stopped
