@@ -7,15 +7,15 @@
   
   tasks:
   - name: ==================== debug =================
-    shell: echo '{{param}}'
+    shell: sudo service teamcity-agent {{ oper }}
   
-  - name: ==================== TC agent '{{param}}' =================
-    service:
-      name: teamcity-agent
-      #pattern: /etc/init.d/teamcity-agent
-      state: '{{param}}'
-      #state: stopped
-      enabled: yes
-    #register: unused_disable
-    #failed_when: "unused_disable|failed and ('find' not in unused_disable.msg and 'found' not in unused_disable.msg)"
-    become: yes
+  #- name: ==================== TC agent '{{param}}' =================
+    #service:
+      #name: teamcity-agent
+      ##pattern: /etc/init.d/teamcity-agent
+      #state: '{{param}}'
+      ##state: stopped
+      #enabled: yes
+    ##register: unused_disable
+    ##failed_when: "unused_disable|failed and ('find' not in unused_disable.msg and 'found' not in unused_disable.msg)"
+    #become: yes
