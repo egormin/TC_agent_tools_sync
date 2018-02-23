@@ -14,5 +14,5 @@
       name: 'teamcity-agent'
       pattern: /etc/init.d
       #state: '{{param}}'
-      state: stopped
+      state: stoppedz
     become: yes
