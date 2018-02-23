@@ -6,17 +6,17 @@
     param: "{{ oper }}" 
   
   tasks:
-  - name: ==================== debug =================
-    shell: sudo service teamcity-agent restart
-    become: yes
+  #- name: ==================== debug =================
+  #  shell: sudo service teamcity-agent restart
+  #  become: yes
   
-  #- name: ==================== TC agent '{{param}}' =================
-    #service:
-      #name: teamcity-agent
-      ##pattern: /etc/init.d/teamcity-agent
-      #state: '{{param}}'
-      ##state: stopped
+  - name: ==================== TC agent '{{param}}' =================
+    service:
+      name: teamcity-agent
+      #pattern: /etc/init.d/teamcity-agent
+      state: '{{param}}'
+      #state: stopped
       #enabled: yes
     ##register: unused_disable
     ##failed_when: "unused_disable|failed and ('find' not in unused_disable.msg and 'found' not in unused_disable.msg)"
-    #become: yes
+    become: yes
