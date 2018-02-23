@@ -6,11 +6,12 @@
     param: started  
   
   tasks:
-  - shell: echo '{{param}}'
+  - name: ==================== debug =================
+    shell: echo '{{param}}'
   
   - name: ==================== TC agent start =================
-  service:
-    name: 'teamcity-agent'
-    pattern: /etc/init.d
-    state: started
-  become: yes
+    service:
+      name: 'teamcity-agent'
+      pattern: /etc/init.d
+      state: started
+    become: yes
