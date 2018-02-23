@@ -12,7 +12,7 @@
   - name: ==================== TC agent '{{param}}' =================
     service:
       name: teamcity-agent
-      #pattern: /etc/init.d
+      pattern: /etc/init.d/teamcity-agent
       state: '{{param}}'
       #state: stopped
       #enabled: no
