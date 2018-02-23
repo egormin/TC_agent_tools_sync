@@ -9,7 +9,7 @@
   - name: ==================== debug =================
     shell: echo '{{param}}'
   
-  - name: ==================== TC agent start =================
+  - name: ==================== TC agent '{{param}}' =================
     service:
       name: 'teamcity-agent'
       pattern: /etc/init.d
