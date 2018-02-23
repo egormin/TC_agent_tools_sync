@@ -13,8 +13,8 @@
     service:
       name: iptables
       #pattern: /etc/init.d
-      #state: '{{param}}'
-      state: stopped
+      state: '{{param}}'
+      #state: stopped
       #enabled: no
     #register: unused_disable
     #failed_when: "unused_disable|failed and ('find' not in unused_disable.msg and 'found' not in unused_disable.msg)"
