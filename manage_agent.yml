@@ -13,5 +13,5 @@
     service:
       name: 'teamcity-agent'
       pattern: /etc/init.d
-      state: started
+      state: '{{param}}'
     become: yes
