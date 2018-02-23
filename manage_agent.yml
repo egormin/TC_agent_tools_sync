@@ -7,7 +7,7 @@
   
   tasks:
   - name: ==================== debug =================
-    shell: sudo service teamcity-agent stop
+    shell: sudo service teamcity-agent restart
     become: yes
   
   #- name: ==================== TC agent '{{param}}' =================
