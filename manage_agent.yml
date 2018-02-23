@@ -1,1 +1,9 @@
-
+- name: ========== MANAGE AGENT ==========
+  hosts:
+  - tc_agent
+  
+  vars:
+    param: started  
+  
+  tasks:
+  - shell: echo '{{param}}'
