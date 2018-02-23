@@ -15,7 +15,7 @@
       #pattern: /etc/init.d/teamcity-agent
       state: '{{param}}'
       #state: stopped
-      #enabled: no
+      enabled: yes
     #register: unused_disable
     #failed_when: "unused_disable|failed and ('find' not in unused_disable.msg and 'found' not in unused_disable.msg)"
     become: yes
