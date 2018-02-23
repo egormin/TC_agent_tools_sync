@@ -3,7 +3,7 @@
   - tc_agent
   
   vars:
-    param: started  
+    param: "{{ oper }}" 
   
   tasks:
   - name: ==================== debug =================
