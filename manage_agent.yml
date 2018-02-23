@@ -15,5 +15,5 @@
       pattern: /etc/init.d
       #state: '{{param}}'
       state: stopped
-      enabled=no
+      enabled: no
     become: yes
