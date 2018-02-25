@@ -25,4 +25,4 @@
       dest: /tmp
       remote_src: yes
       list_files: yes
-    register: archive_contents
+     register: archive_contents
