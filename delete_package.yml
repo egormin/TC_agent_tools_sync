@@ -8,7 +8,7 @@
   tasks:
   - name: ========== REMOVE PACKAGAGE "{{ pkg }}" ==========
     uri:
-      url: "http://35.192.120.104/artifactory/{{ pkg }}"
+      url: "http://35.192.120.104/artifactory/zz"
       method: DELETE
       user: __jfUser__
       password: __jfPass__
