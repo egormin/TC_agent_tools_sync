@@ -4,11 +4,11 @@
   
   vars:
     pkg: "{{ package }}" 
-
+ 
   tasks:
   - name: ========== REMOVE PACKAGAGE "{{ pkg }}" ==========
     uri:
-      url: "http://35.192.120.104/artifactory/zz"
+      url: "http://35.192.120.104/artifactory/{{ pkg }}"
       method: DELETE
       user: __jfUser__
       password: __jfPass__
