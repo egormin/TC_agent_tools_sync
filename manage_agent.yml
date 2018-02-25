@@ -13,7 +13,7 @@
   - name: ==================== TC agent '{{param}}' =================
     service:
       name: teamcity-agent
-      #pattern:  /buildspace/buildAgent/logs/buildAgent
+      pattern: buildAgent
       state: '{{param}}'
       #state: stopped
       #enabled: yes
