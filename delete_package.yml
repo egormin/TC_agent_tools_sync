@@ -28,13 +28,17 @@
       list_files: yes
     register: archive_contents
     
-  - name: SHOW
-    shell: echo {{archive_contents.files[0]}}
-    
-  - name: DEBUG  
+  - name: "{{ archive_contents.files[0]  DEB package will be deleted}}"
     debug:
       var: archive_contents.files[0]
       verbosity: 2
+      
+  - name: "{{ archive_contents.files[0] package will be deleted}}"    
+    file:
+      state: absent
+      path: "/buildspace/buildTools/{{ archive_contents.files[0] }}"
+      
+     
       
   #- name: ========== GET PACKAGE FOLDER ==========
   #  shell: echo {{ package }} | cut -f1 -d"-"
