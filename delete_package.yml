@@ -17,6 +17,12 @@
   - name: ===================== DBG =====================
     debug:
       msg: "{{ pkg.split('/') }}"
+    register: archive
+    
+  - name: "{{ archive }}  DEB package will be deleted"
+    debug:
+      var: archive[0]
+      verbosity: 2
       
   - name: xr fold
     file:
