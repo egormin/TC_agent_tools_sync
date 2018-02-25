@@ -10,8 +10,8 @@
     get_url:
       url: "{{ pkg }}"
       dest: "/tmp/tmp.arch"
-      url_username: __myUser__
-      url_password: __myPassword__
+      url_username: __jfUser__
+      url_password: __jfPass__
       mode: 0440
       
   #- name: ========== GET PACKAGE FOLDER ==========
