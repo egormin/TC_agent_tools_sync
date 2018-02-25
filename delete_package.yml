@@ -5,7 +5,7 @@
   vars:
     pkg: "{{ Package }}" 
 
-
+  tasks:
   - name: ========== REMOVE PACKAGAGE "{{ pkg }}" ==========
     uri:
       url: "http://35.192.120.104/artifactory/build/gradle/favicon.ico"
