@@ -29,7 +29,12 @@
     register: archive_contents
     
   - name: SHOW
-    shell: "echo {{archive_contents.files[0]}}"
+    shell: echo {{archive_contents.files[0]}}
+    
+  - name: DEBUG  
+    debug:
+      var: archive_contents.files[0]
+      verbosity: 2
       
   #- name: ========== GET PACKAGE FOLDER ==========
   #  shell: echo {{ package }} | cut -f1 -d"-"
