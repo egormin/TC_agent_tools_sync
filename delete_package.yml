@@ -14,10 +14,11 @@
       url_password: __jfPass__
       mode: 0440
       
-  - file:
-    path: /tmp/xx
-    state: directory
-    mode: 0755
+  - name: xr fold
+    file:
+      path: /tmp/xx
+      state: directory
+      mode: 0755
       
   - name: Extract files
     unarchive: 
