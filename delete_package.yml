@@ -21,7 +21,7 @@
     
   - name: "{{ archive }}  DEB package will be deleted"
     debug:
-      var: archive[0]
+      var: archive.msg[0]
       verbosity: 2
       
   - name: xr fold
