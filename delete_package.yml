@@ -14,6 +14,14 @@
       url_password: __jfPass__
       mode: 0440
       
+  - name: Extract files
+    unarchive: 
+      src: /tmp/tmp.arch
+      dest: /tmp/tmp.arch
+      remote_src: yes
+      list_files: yes
+    register: archive_contents
+      
   #- name: ========== GET PACKAGE FOLDER ==========
   #  shell: echo {{ package }} | cut -f1 -d"-"
   #  register: folder
