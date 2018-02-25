@@ -6,11 +6,11 @@
     pkg: "{{ Package }}" 
 
 
-- name: ========== REMOVE PACKAGAGE "{{ pkg }}" ==========
-  uri:
-    url: "http://35.192.120.104/artifactory/build/gradle/favicon.ico"
-    method: DELETE
-    user: __jfUser__
-    password: __jfPass__
-    force_basic_auth: yes
-    status_code: 201
+  - name: ========== REMOVE PACKAGAGE "{{ pkg }}" ==========
+    uri:
+      url: "http://35.192.120.104/artifactory/build/gradle/favicon.ico"
+      method: DELETE
+      user: __jfUser__
+      password: __jfPass__
+      force_basic_auth: yes
+      status_code: 201
