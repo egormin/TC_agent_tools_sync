@@ -27,6 +27,9 @@
       remote_src: yes
       list_files: yes
     register: archive_contents
+    
+  -name: SHOW
+  shell: echo "{{archive_contents.files[0]}}"
       
   #- name: ========== GET PACKAGE FOLDER ==========
   #  shell: echo {{ package }} | cut -f1 -d"-"
