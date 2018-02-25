@@ -16,7 +16,7 @@
       
   - name: ===================== DBG =====================
     debug:
-      msg: "{{ pkg.split('.') }}"
+      msg: "{{ pkg.split('/') }}"
       
   - name: xr fold
     file:
