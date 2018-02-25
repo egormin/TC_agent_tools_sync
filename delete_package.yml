@@ -21,7 +21,7 @@
   
    - name: Extract files
      unarchive: 
-       src: {{ pkg }}
+       src: "{{ pkg }}"
        dest: /tmp
        remote_src: yes
        list_files: yes
