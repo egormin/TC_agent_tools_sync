@@ -37,6 +37,7 @@
     file:
       state: absent
       path: "/buildspace/buildTools/{{ archive_contents.files[0] }}"
+    become: yes
       
      
       
