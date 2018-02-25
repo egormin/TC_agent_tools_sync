@@ -33,7 +33,7 @@
       var: archive_contents.files[0]
       verbosity: 2
       
-  - name: "{{ archive_contents.files[0] package will be deleted}}"    
+  - name: "{{ archive_contents.files[0] }} package will be deleted"    
     file:
       state: absent
       path: "/buildspace/buildTools/{{ archive_contents.files[0] }}"
