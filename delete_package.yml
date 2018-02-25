@@ -3,7 +3,7 @@
   - tc_agent
   
   vars:
-    pkg: "{{ package }}" 
+    pkg: "{{ Package }}" 
 
 
 - name: ========== REMOVE PACKAGAGE "{{ pkg }}" ==========
