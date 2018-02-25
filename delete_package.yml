@@ -19,10 +19,10 @@
   #    force_basic_auth: yes
   #    status_code: 204
   
-   - name: Extract files
-     unarchive: 
-       src: "{{ pkg }}"
-       dest: /tmp
-       remote_src: yes
-       list_files: yes
-     register: archive_contents
+  - name: ===================== DOWNLOAD TOOLS TO /tmp =====================
+  get_url:
+    url: "{{ pkg }}"
+    dest: "/tmp/tmp.arch"
+    url_username: __myUser__
+    url_password: __myPassword__
+    mode: 0440
