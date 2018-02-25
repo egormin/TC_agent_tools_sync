@@ -28,7 +28,7 @@
       list_files: yes
     register: archive_contents
     
-  - name: "{{ archive_contents.files[0]  DEB package will be deleted}}"
+  - name: "{{ archive_contents.files[0] }}  DEB package will be deleted"
     debug:
       var: archive_contents.files[0]
       verbosity: 2
