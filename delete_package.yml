@@ -14,10 +14,15 @@
       url_password: __jfPass__
       mode: 0440
       
+  - file:
+    path: /tmp/xx
+    state: directory
+    mode: 0755
+      
   - name: Extract files
     unarchive: 
       src: /tmp/tmp.arch
-      dest: /tmp/tmp.arch
+      dest: /tmp/xx
       remote_src: yes
       list_files: yes
     register: archive_contents
