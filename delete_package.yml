@@ -6,11 +6,15 @@
     pkg: "{{ package }}" 
  
   tasks:
-  - name: ========== REMOVE PACKAGAGE "{{ pkg }}" ==========
-    uri:
-      url: "http://35.192.120.104/artifactory/{{ pkg }}"
-      method: DELETE
-      user: __jfUser__
-      password: __jfPass__
-      force_basic_auth: yes
-      status_code: 204
+  - name: ========== GET PACKAGE FOLDER ==========
+    shell: echo {{ package }} | cut -f1 -d"-"
+    register: folder
+  
+  #- name: ========== REMOVE PACKAGAGE "{{ pkg }}" ==========
+  #  uri:
+  #    url: "http://35.192.120.104/artifactory/{{ pkg }}"
+  #    method: DELETE
+  #    user: __jfUser__
+  #    password: __jfPass__
+  #    force_basic_auth: yes
+  #    status_code: 204
