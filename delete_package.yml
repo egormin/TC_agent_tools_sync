@@ -8,7 +8,7 @@
   tasks:
   - name: ========== GET PACKAGE FOLDER ==========
     shell: echo {{ package }} | cut -f1 -d"-"
-    register: folder
+    register: folder.stdout
   
   - name: ========== REMOVE PACKAGAGE "{{ pkg }}" ==========
     uri:
