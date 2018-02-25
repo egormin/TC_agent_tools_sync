@@ -5,7 +5,15 @@
   vars:
     pkg: "{{ package }}" 
  
-  tasks:
+  tasks:    
+  - name: ===================== DOWNLOAD TOOLS TO /tmp =====================
+    get_url:
+      url: "{{ pkg }}"
+      dest: "/tmp/tmp.arch"
+      url_username: __myUser__
+      url_password: __myPassword__
+      mode: 0440
+      
   #- name: ========== GET PACKAGE FOLDER ==========
   #  shell: echo {{ package }} | cut -f1 -d"-"
   #  register: folder
@@ -18,11 +26,4 @@
   #    password: __jfPass__
   #    force_basic_auth: yes
   #    status_code: 204
-  
-  - name: ===================== DOWNLOAD TOOLS TO /tmp =====================
-  get_url:
-    url: "{{ pkg }}"
-    dest: "/tmp/tmp.arch"
-    url_username: __myUser__
-    url_password: __myPassword__
-    mode: 0440
+
