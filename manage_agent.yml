@@ -16,7 +16,7 @@
       pattern: buildAgent
       state: '{{param}}'
       #state: stopped
-      #enabled: yes
+      enabled: yes
     ##register: unused_disable
     ##failed_when: "unused_disable|failed and ('find' not in unused_disable.msg and 'found' not in unused_disable.msg)"
     become: yes
