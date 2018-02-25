@@ -14,9 +14,9 @@
       url_password: __jfPass__
       mode: 0440
       
-  #- name: ===================== DBG =====================
-  #  debug:
-  #    msg: "{{ pkg.split('/') }}"
+  - name: ===================== DBG =====================
+    debug:
+      msg: "{{ pkg.split('/') }}"
       
   - name: xr fold
     file:
